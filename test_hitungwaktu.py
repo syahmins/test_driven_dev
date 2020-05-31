@@ -24,15 +24,14 @@ MingguHari = datetime.now() + timedelta(weeks=TambahMinggu, days=TambahHari2)
 print(int(TambahMinggu), 'minggu dan ', TambahHari2, 'hari dari sekarang adalah ', MingguHari)
 
 # menghitung berapa hari yang sudah terlampaui
-# nyd=new year date. Formatnya date(today.year, bulanawaltahun, tanggalawaltahun)
+# Formatnya date(tahun, bulan, tanggal)
 today = date.today()
-nyd = date(today.year, 1, 1)
+nyd = date(today.year, 8, 17)
 
-
-# jika tahun baru sudah terlewati
+# jika HUT RI sudah terlewati
 if nyd < today:
-    print('Tahun baru sudah lewat sejak %d hari yang lalu' % (today - nyd).days)
+    print('HUT RI sudah lewat sejak %d hari yang lalu' % (today - nyd).days)
 
-# jika tahun baru belum terlewati
+# jika belum terlewati
 if nyd > today:
-    print('Tahun baru akan tiba %d hari lagi' % (today + nyd).days)
+    print('HUT RI akan tiba %d hari lagi' % (nyd - today).days)
